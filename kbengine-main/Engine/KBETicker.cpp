@@ -32,7 +32,7 @@ void UKBETicker::Tick(float DeltaTime)
 	if (kbe_player && ue4_player)
 	{
 
-		FVector3f player_location = ue4_player->GetActorLocation();
+		FVector player_location = ue4_player->GetActorLocation();
 		UE4Pos2KBPos(kbe_player->position, FVector3f(player_location.X, player_location.Y, player_location.Z));
 		UE4Dir2KBDir(kbe_player->direction, ue4_player->GetActorRotation());
 
