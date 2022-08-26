@@ -1,5 +1,7 @@
 # kbengine_ue5
 
+  kbengine source:https://github.com/kbengine/kbengine.git
+
 1. 使用kbengine-main中提供的源文件修改并重新编译kbe相关代码
 
 2. 调用new_assets.bat重新生成ue5版本的服务器
