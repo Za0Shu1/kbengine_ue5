@@ -13,3 +13,17 @@
 5. 编写插件中Scripts代码
 
 6. 插件放到ue5工程中，.build.cs中引用模块，.uproject中关联插件
+
+# mysql注意事项
+
+  mysql8 安装时选择 Use Legacy Authentication Method,不使用caching_sha2_password 密码身份验证
+
+  ProgramData\MySQL\MySQL Server 8.0\my.ini中[mysqld]下面加上skip_ssl
+
+  net start mysql80
+
+  mysql> use mysql;
+
+  mysql> select user,host,plugin from user;//查看当前验证方式
+  
+  mysql> ALTER USER 'root'@'%' IDENTIFIED WITH mysql_native_password BY '123456';//修改验证方式
